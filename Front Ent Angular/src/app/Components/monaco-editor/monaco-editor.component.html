@@ -1,0 +1,12 @@
+<label class="form-label">Select programming language</label>
+<select [(ngModel)]="selectedLanguageModel" class="form-select form-select-sm d-inline">
+  <option [ngValue]="i" *ngFor="let language of getLanguages() let i = index;">{{ language.language }}</option>
+</select>
+
+<label class="form-label mt-3">Task Solution <span [class.visually-hidden]="goodEditorCode" class="text-danger">should be edited</span></label>
+<ngs-code-editor
+  [theme]="getSettings.theme"
+  [codeModel]="getSettings.codeModel"
+  [options]="getSettings.options"
+  (valueChanged)="onEditorCodeChanged($event)">
+</ngs-code-editor>

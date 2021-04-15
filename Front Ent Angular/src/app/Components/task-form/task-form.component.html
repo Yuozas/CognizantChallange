@@ -1,0 +1,18 @@
+<form>
+  <div class="mb-3">
+    <label for="nickname" class="form-label">Nickname <span [class.visually-hidden]="goodNickname" class="text-danger">should not be empty</span></label>
+    <input #nickname type="text" class="form-control" id="nickname" placeholder="Type down your nickname here" required>
+  </div>
+  <div class="mb-3">
+    <label for="task">Task <span [class.visually-hidden]="goodTask" class="text-danger">should be selected</span></label>
+    <select [(ngModel)]="selectedTask" [ngModelOptions]="{standalone: true}" class="form-select form-select-sm">
+      <option [ngValue]="-1" [selected] ="true">Select task you wan't to do</option>
+      <option [ngValue]="i" *ngFor="let task of getTasks() let i = index;">{{ task.name }}</option>
+    </select>
+    <p [className]="selectedTask == i ? 'form-text font-weight-light' : 'form-text font-weight-light visually-hidden'" *ngFor="let task of getTasks() let i = index;" [innerText]="task.description"></p>
+  </div>
+  <div class="mb-3">
+    <app-monaco-editor #editor></app-monaco-editor>
+  </div>
+  <button (click)="submit(nickname, editor)" class="btn btn-primary">Submit Solution</button>
+</form>

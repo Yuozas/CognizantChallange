@@ -1,0 +1,36 @@
+<main class="flex-shrink-0">
+  <div class="container pb-5">
+    <h1 class="pt-5">Top 3</h1>
+    <p p class="lead">
+      Her you can check out top-3 players with most successful submissions
+    </p>
+    <hr class="mt-1 mb-5">
+    <div class="d-flex justify-content-center border border-secondary bg-white">
+      <div class="p-2">
+        <p class="text-center m-0">
+          Player name
+        </p>
+      </div>
+      <div class="p-2">
+        <p class="text-center m-0">
+          Task selected
+        </p>
+      </div>
+      <div class="p-2">
+        <p class="text-center m-0">
+          Solution code
+        </p>
+      </div>
+      <div class="p-2">
+        <p class="text-center m-0">
+          Language selected
+        </p>
+      </div>
+    </div>
+    <ul class="list-group list-group-numbered">
+      <ng-container *ngIf="canRender">
+        <app-solution [index]="i+1" [solution]="solutions[i]" *ngFor="let solution of solutions; let i = index"></app-solution>
+      </ng-container>
+    </ul>
+  </div>
+</main>
