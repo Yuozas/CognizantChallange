@@ -1,25 +1,28 @@
-li{
+li {
   font-family: 'Noto Sans JP', sans-serif;
 }
-.b-t{
+
+.b-t {
   font-weight: bold;
-  font-size:large;
+  font-size: large;
 }
-.s-t{
+
+.s-t {
   font-weight: 300;
   font-size: small;
 }
-.m-t{
+
+.m-t {
   font-weight: 400;
   font-size: medium;
 }
-ngs-code-editor{
-  height:200px;
+
+ngs-code-editor {
+  height: 200px;
 }
-.editor-div{
+
+.editor-div {
   background-color: #201c1c;
-  width:100%;
-}
-.name-task-div{
-  width:150px;
+  max-width: 100%;
+  min-width: 100px;
 }

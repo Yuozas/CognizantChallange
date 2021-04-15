@@ -1,18 +1,29 @@
-<li class="list-group-item d-flex justify-content-between align-items-start rounded">
-  <p class="s-t">{{getIndex}}</p>
-  <div class="mx-2 name-task-div">
-    <div class=""><p class="text-center text-capitalize b-t">{{getName}}</p></div>
-    <p class="text-center m-t">{{getTask}}</p>
-    <p class="text-center s-t">Total tasks <span class="badge bg-info rounded-pill">{{getTotal}}</span></p>
+<li>
+  <div class="list-group-item d-flex rounded">
+    <div>
+      <p class="s-t">{{ getIndex }}</p>
+    </div>
+    <div class="mx-2 name-task-div">
+      <div class="">
+        <p class="text-center text-capitalize b-t">{{ getName }}</p>
+      </div>
+      <p class="text-center m-t">{{ getTask }}</p>
+      <p class="text-center s-t">
+        Total tasks
+        <span class="badge bg-info rounded-pill">{{ getTotal }}</span>
+      </p>
+    </div>
+    <div class="editor-div flex-fill rounded p-1">
+      <ngs-code-editor class="w-100"
+                       [readOnly]="true"
+                       [theme]="theme"
+                       [codeModel]="codeModel"
+                       [options]="options"></ngs-code-editor>
+    </div>
+    <div>
+      <span class="badge bg-primary rounded-pill ms-2 s-t">
+        {{getLanguage}}
+      </span>
+    </div>
   </div>
-  <div class="flex-fill" class="editor-div rounded p-1">
-
-    <ngs-code-editor
-    [readOnly]="true"
-    [theme]="theme"
-    [codeModel]="codeModel"
-    [options]="options"
-    ></ngs-code-editor>
-  </div>
-  <span class="badge bg-primary rounded-pill ms-2 s-t">{{getLanguage}}</span>
 </li>
