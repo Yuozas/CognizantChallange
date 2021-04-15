@@ -21,3 +21,9 @@ Conlusion
 
 Initial planned time for the project was about 1-2 hours, but it took a lot more which is approximately 6h-7h(not exactly sure) and 90% of the time was figuring out how typescript/angular works, since other technolagies I've used a lot before.
 My view is that Angular is alright. It adds whole new layer of interactivness without having to code much, but React might have been a better choice. 
+
+
+To run front end 
+I've been using "ng serve" with angular cli on ubuntu(WSL)
+As for the back end
+I've been runing it on Visual Studio Code without debuging (ctrl + f5)
